@@ -16,9 +16,14 @@ class PersonController extends Controller
     }
 
     public function create(Request $request){
-      $data['name'] = $request['name'];
-      $data['email'] = $request['email'];
-      $data['phone'] = $request['phone'];
+      $data['Generacion'] = $request['Generacion'];
+      $data['Matricula'] = $request['Matricula'];
+      $data['Nombre'] = $request['Nombre'];
+      $data['Apellido'] = $request['Apellido'];
+      $data['Email'] = $request['Email'];
+      $data['Status'] = $request['Status'];
+      $data['Curso'] = $request['Curso'];
+      $data['Calificacion'] = $request['Calificacion'];
       Person::create($data);
       return response()->json([
           'message' => "Successfully created",
@@ -40,9 +45,14 @@ class PersonController extends Controller
     }
 
     public function update(Request $request,$id){
-      $data['name'] = $request['name'];
-      $data['email'] = $request['email'];
-      $data['phone'] = $request['phone'];
+      $data['Generacion'] = $request['Generacion'];
+      $data['Matricula'] = $request['Matricula'];
+      $data['Nombre'] = $request['Nombre'];
+      $data['Apellido'] = $request['Apellido'];
+      $data['Email'] = $request['Email'];
+      $data['Status'] = $request['Status'];
+      $data['Curso'] = $request['Curso'];
+      $data['Calificacion'] = $request['Calificacion'];
       Person::find($id)->update($data);
       return response()->json([
           'message' => "Successfully updated",

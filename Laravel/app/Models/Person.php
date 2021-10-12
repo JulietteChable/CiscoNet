@@ -12,9 +12,14 @@ class Person extends Model
     protected $table = "person";
 
     protected $fillable = [
-      'name',
-      'email',
-      'phone'
+      'Generacion',
+      'Matricula',
+      'Nombre',
+      'Apellido',
+      'Email',
+      'Status',
+      'Curso',
+      'Calificacion'
     ];
  
 }

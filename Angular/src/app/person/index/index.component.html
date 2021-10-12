@@ -10,19 +10,29 @@
     <table class="table ">
       <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th width="220px">Action</th>
+        <th>GENERACION</th>
+        <th>MATRICULA</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+        <th>EMAIL</th>
+        <th>STATUS</th>
+        <th>CURSO</th>
+        <th>CALIFICACION</th>
+        <th width="220px">MODIFICAR</th>
       </tr>
       <tr *ngFor="let person of persons">
         <td>{{ person.id }}</td>
-        <td>{{ person.name }}</td>
-        <td>{{ person.email }}</td>
-        <td>{{ person.phone }}</td>
+        <td>{{ person.Generacion }}</td>
+        <td>{{ person.Matricula }}</td>
+        <td>{{ person.Nombre }}</td>
+        <td>{{ person.Apellido }}</td>
+        <td>{{ person.Email }}</td>
+        <td>{{ person.Status }}</td>
+        <td>{{ person.Curso }}</td>
+        <td>{{ person.Calificacion }}</td>
         <td>
-          <a href="#" [routerLink]="['/person/', 'edit', person.id  ]" class="btn btn-primary">Edit</a>
-          <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger">Delete</button>
+          <a href="#" [routerLink]="['/person/', 'edit', person.id  ]" class="btn btn-primary">Editar</a>
+          <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger">Borrar</button>
         </td>
       </tr>
     </table>
