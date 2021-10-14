@@ -1,32 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-
-import { PersonService } from '../person.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { Person } from '../person';
+import { AlumnoService } from '../alumno.service';
+import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  selector: 'app-create',
+  templateUrl: './create.component.html',
+  styleUrls: ['./create.component.css']
 })
-export class EditComponent implements OnInit {
+export class CreateComponent implements OnInit {
 
-  id: number;
-  person: Person;
   form: FormGroup;
 
   constructor(
-    public personService: PersonService,
-    private route: ActivatedRoute,
+    public alumnoService: AlumnoService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['idPerson'];
-    this.personService.find(this.id).subscribe((data: Person)=>{
-      this.person = data;
-    });
 
     this.form = new FormGroup({
       Generacion:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ1234567890-_ \-\']+') ]),
@@ -47,9 +38,9 @@ export class EditComponent implements OnInit {
 
   submit(){
     console.log(this.form.value);
-    this.personService.update(this.id, this.form.value).subscribe(res => {
-         console.log('Person updated successfully!');
-         this.router.navigateByUrl('person/index');
+    this.alumnoService.create(this.form.value).subscribe(res => {
+         console.log('cliente created successfully!');
+         this.router.navigateByUrl('cliente/index');
     })
   }
 

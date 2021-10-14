@@ -1,5 +1,4 @@
-
-export interface Person {
+export interface Alumno {
 
     id: number;
     Generacion: string;
@@ -12,5 +11,3 @@ export interface Person {
     Calificacion: string;
     
 }
-
-
