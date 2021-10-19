@@ -5,9 +5,7 @@ export interface Alumno {
     Matricula: string;
     Nombre: string;
     Apellido: string;
-    Email: string;
     Status: string;
     Curso: string;
-    Calificacion: string;
     
 }

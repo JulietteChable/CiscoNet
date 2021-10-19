@@ -1,4 +1,4 @@
-<div>
+<div class="container">
 
     <div class="d-flex justify-content-between">
       <h4>Ingresar alumno</h4>
@@ -68,21 +68,6 @@
             </div>
           </div>
         </div>
-  
-          <div class="form-group row">
-              <div class="col-md-6 ">
-                <label for="Matricula">Email:</label>
-                <input
-                  formControlName="Email"
-                  id="Email"
-                  type="text"
-                  class="form-control">
-                <div *ngIf="f.Email.touched && f.Email.invalid" class="alert alert-danger">
-                    <div *ngIf="f.Email.errors.required">*Atributo requerido.</div>
-                    <div *ngIf="f.Email.errors.email">*The Atributo must be a valid email address.</div>
-                </div>
-              </div>
-          </div>
 
           <div class="form-group row">
             <div class="col-md-6 ">
@@ -114,22 +99,7 @@
             </div>
           </div>
   
-          <div class="form-group row">
-              <div class="col-md-6 ">
-                <label for="Calificacion">Calificacion:</label>
-                <input
-                  formControlName="Calificacion"
-                  id="Calificacion"
-                  type="text"
-                  class="form-control">
-                <div *ngIf="f.Calificacion.touched && f.Calificacion.invalid" class="alert alert-danger">
-                    <div *ngIf="f.Calificacion.errors.required">*Atributo requerido</div>
-                    <div *ngIf="f.Calificacion.errors.pattern">*The Atributo must only contain numbers.</div>
-                </div>
-              </div>
-          </div>
-  
           <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Guardar</button>
       </form>
-  </div>
+ </div>
   

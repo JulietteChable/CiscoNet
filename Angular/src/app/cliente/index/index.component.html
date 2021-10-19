@@ -1,4 +1,4 @@
-<section>
+<section class="container">
 
     <div class="d-flex justify-content-between">
       <h4>Lista de alumnos</h4>
@@ -14,10 +14,8 @@
         <th>MATRICULA</th>
         <th>NOMBRE</th>
         <th>APELLIDO</th>
-        <th >EMAIL</th>
         <th>STATUS</th>
         <th>CURSO</th>
-        <th>CALIFICACION</th>
         <th width="220px">MODIFICAR</th>
 
       </tr>
@@ -27,10 +25,8 @@
         <td>{{ alumno.Matricula }}</td>
         <td>{{ alumno.Nombre }}</td>
         <td>{{ alumno.Apellido }}</td>
-        <td>{{ alumno.Email }}</td>
         <td>{{ alumno.Status }}</td>
         <td>{{ alumno.Curso }}</td>
-        <td>{{ alumno.Calificacion }}</td>
         <td>
           <!-- Codigo de los botones Editar y borrar -->
           <a href="#" [routerLink]="['/cliente/', 'edit', alumno.id  ]" class="btn btn-primary">Editar</a>

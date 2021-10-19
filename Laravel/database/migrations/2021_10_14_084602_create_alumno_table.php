@@ -20,10 +20,8 @@ class CreateAlumnoTable extends Migration
             $table->bigInteger('Matricula');
             $table->string('Nombre');
             $table->string('Apellido');
-            $table->string('Email');
             $table->string('Status');
             $table->string('Curso');
-            $table->bigInteger('Calificacion');
             $table->timestamps();
         });
     }
