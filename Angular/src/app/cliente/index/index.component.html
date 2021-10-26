@@ -8,6 +8,7 @@
     <br>
     
     <table class="table ">
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>GENERACION</th>
@@ -19,6 +20,7 @@
         <th width="220px">MODIFICAR</th>
 
       </tr>
+    </thead>
       <tr *ngFor="let alumno of alumnos">
         <td>{{ alumno.id }}</td>
         <td>{{ alumno.Generacion }}</td>
