@@ -9,23 +9,6 @@
 
     <form [formGroup]="form" (ngSubmit)="submit()">
 
-
-      <div class="form-group row">
-        <div class="col-md-6 ">
-          <label for="Generacion">Generacion:</label>
-          <input
-            formControlName="Generacion"
-            [(ngModel)]="alumno.Generacion"
-            id="Generacion"
-            type="text"
-            class="form-control">
-          <div *ngIf="f.Generacion.touched && f.Generacion.invalid" class="alert alert-danger">
-              <div *ngIf="f.Generacion.errors.required">*Name is required.</div>
-              <div *ngIf="f.Generacion.errors.pattern">*The name must only contain letters.</div>
-          </div>
-        </div>
-    </div>
-
     <div class="form-group row">
       <div class="col-md-6 ">
         <label for="Matricula">Matricula:</label>
@@ -73,38 +56,13 @@
       </div>
     </div>
   </div>
-
-    <div class="form-group row">
-      <div class="col-md-6 ">
-        <label for="Status">Status:</label>
-        <input
-          formControlName="Status"
-          [(ngModel)]="alumno.Status"
-          id="Status"
-          type="text"
-          class="form-control">
-        <div *ngIf="f.Status.touched && f.Status.invalid" class="alert alert-danger">
-            <div *ngIf="f.Status.errors.required">*Name is required.</div>
-            <div *ngIf="f.Status.errors.pattern">*The name must only contain letters.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <div class="col-md-6 ">
-        <label for="Curso">Curso:</label>
-        <input
-          formControlName="Curso"
-          [(ngModel)]="alumno.Curso"
-          id="Curso"
-          type="text"
-          class="form-control">
-        <div *ngIf="f.Curso.touched && f.Curso.invalid" class="alert alert-danger">
-            <div *ngIf="f.Curso.errors.required">*Name is required.</div>
-            <div *ngIf="f.Curso.errors.pattern">*The name must only contain letters.</div>
-        </div>
-      </div>
-    </div>
+  <!-- Default checked -->
+  <label for="Status">Status:</label>
+  <div class="custom-control custom-switch">
+  <input  type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+  <label class="custom-control-label" for="customSwitch1"></label>
+  </div>
+  <br>
 
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Actualizar</button>
     </form>

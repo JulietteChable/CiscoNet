@@ -16,12 +16,9 @@ class AlumnoController extends Controller
     }
 
     public function create(Request $request){
-      $data['Generacion'] = $request['Generacion'];
       $data['Matricula'] = $request['Matricula'];
       $data['Nombre'] = $request['Nombre'];
       $data['Apellido'] = $request['Apellido'];
-      $data['Status'] = $request['Status'];
-      $data['Curso'] = $request['Curso'];
       Alumno::create($data);
       return response()->json([
           'message' => "Successfully created",
@@ -43,12 +40,9 @@ class AlumnoController extends Controller
     }
 
     public function update(Request $request,$id){
-      $data['Generacion'] = $request['Generacion'];
       $data['Matricula'] = $request['Matricula'];
       $data['Nombre'] = $request['Nombre'];
       $data['Apellido'] = $request['Apellido'];
-      $data['Status'] = $request['Status'];
-      $data['Curso'] = $request['Curso'];
       Alumno::find($id)->update($data);
       return response()->json([
           'message' => "Successfully updated",

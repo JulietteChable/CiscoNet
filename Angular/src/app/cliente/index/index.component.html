@@ -11,25 +11,27 @@
     <thead class="thead-dark">
       <tr>
         <th>ID</th>
-        <th>GENERACION</th>
         <th>MATRICULA</th>
         <th>NOMBRE</th>
         <th>APELLIDO</th>
         <th>STATUS</th>
-        <th>CURSO</th>
         <th width="220px">MODIFICAR</th>
 
       </tr>
     </thead>
       <tr *ngFor="let alumno of alumnos">
         <td>{{ alumno.id }}</td>
-        <td>{{ alumno.Generacion }}</td>
         <td>{{ alumno.Matricula }}</td>
         <td>{{ alumno.Nombre }}</td>
         <td>{{ alumno.Apellido }}</td>
-        <td>{{ alumno.Status }}</td>
-        <td>{{ alumno.Curso }}</td>
+        <td> 
+          <div class="custom-control custom-switch">
+            <input  type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+            <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+        </td>
         <td>
+          
           <!-- Codigo de los botones Editar y borrar -->
           <a href="#" [routerLink]="['/cliente/', 'edit', alumno.id  ]" class="btn btn-primary">Editar</a>
           <button type="button" (click)="deleteAlumno(alumno.id)" class="btn btn-danger">Borrar</button>

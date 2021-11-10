@@ -13,13 +13,9 @@ class Alumno extends Model
 
     protected $fillable = [
         
-      'Generacion',
       'Matricula',
       'Nombre',
       'Apellido',
-      'Email',
-      'Status',
-      'Curso',
-      'Calificacion'
+      
     ];
 }
