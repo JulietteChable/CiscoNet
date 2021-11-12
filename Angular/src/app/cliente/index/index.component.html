@@ -6,8 +6,9 @@
     </div>
 
     <br>
-    
+
     <table class="table ">
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>GENERACION</th>
@@ -19,6 +20,7 @@
         <th width="220px">MODIFICAR</th>
 
       </tr>
+    </thead>
       <tr *ngFor="let alumno of alumnos">
         <td>{{ alumno.id }}</td>
         <td>{{ alumno.Generacion }}</td>
@@ -31,7 +33,7 @@
           <!-- Codigo de los botones Editar y borrar -->
           <a href="#" [routerLink]="['/cliente/', 'edit', alumno.id  ]" class="btn btn-primary">Editar</a>
           <button type="button" (click)="deleteAlumno(alumno.id)" class="btn btn-danger">Borrar</button>
-          
+
         </td>
       </tr>
     </table>

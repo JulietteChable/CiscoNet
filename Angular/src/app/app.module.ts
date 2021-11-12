@@ -4,6 +4,9 @@ import {SharedModule} from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ClienteModule } from './cliente/cliente.module';
+import { GeneracionesModule } from './generaciones/generaciones.module';
+import { CursosModule } from './cursos/cursos.module';
+import { CalificacionesModule } from './calificaciones/calificaciones.module';
 
 
 import { AppComponent } from './app.component';
@@ -11,15 +14,19 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-  
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    ClienteModule,
     HttpClientModule,
-    
+    ClienteModule,
+    GeneracionesModule,
+    CursosModule,
+    CalificacionesModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

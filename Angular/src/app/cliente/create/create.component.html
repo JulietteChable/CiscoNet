@@ -4,23 +4,22 @@
       <h4>Ingresar alumno</h4>
       <a href="#" routerLink="/cliente/index" class="btn btn-success">Regrear</a>
     </div>
-  
+
     <hr/>
-  
+
       <form [formGroup]="form" (ngSubmit)="submit()">
-  
+
           <div class="form-group row">
               <div class="col-md-6 ">
                 <label for="Generacion">Generacion:</label>
-                <input
-                  formControlName="Generacion"
-                  id="Generacion"
-                  type="text"
-                  class="form-control">
-                <div *ngIf="f.Generacion.touched && f.Generacion.invalid" class="alert alert-danger">
-                    <div *ngIf="f.Generacion.errors.required">*Atributo requerido.</div>
-                    <div *ngIf="f.Generacion.errors.pattern">*The Atributo must only contain letters.</div>
-                </div>
+                <br>
+                <select name="OS">
+                  <option value="1">20202021N</option>
+
+               </select>
+
+
+
               </div>
           </div>
 
@@ -72,34 +71,30 @@
           <div class="form-group row">
             <div class="col-md-6 ">
               <label for="Status">Status:</label>
-              <input
-                formControlName="Status"
-                id="Status"
-                type="text"
-                class="form-control">
-              <div *ngIf="f.Status.touched && f.Status.invalid" class="alert alert-danger">
-                  <div *ngIf="f.Status.errors.required">*Atributo requerido.</div>
-                  <div *ngIf="f.Status.errors.pattern">*The Atributo must only contain letters.</div>
-              </div>
+              <br>
+                <select name="OS">
+                  <option value="1">Activo</option>
+                  <option value="2">Activa</option>
+                  <option value="3">Baja Temporal</option>
+                  <option value="4">Baja Definitiva</option>
+
+               </select>
             </div>
           </div>
 
           <div class="form-group row">
             <div class="col-md-6 ">
               <label for="Curso">Curso:</label>
-              <input
-                formControlName="Curso"
-                id="Curso"
-                type="text"
-                class="form-control">
-              <div *ngIf="f.Curso.touched && f.Curso.invalid" class="alert alert-danger">
-                  <div *ngIf="f.Curso.errors.required">*Atributo requerido</div>
-                  <div *ngIf="f.Curso.errors.pattern">*The Atributo must only contain letters.</div>
-              </div>
+              <br>
+                <select name="OS">
+                  <option value="1">CCNA_1_20202021N</option>
+                  <option value="2">CCNA_2_20202021N</option>
+
+               </select>
             </div>
           </div>
-  
-          <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Guardar</button>
+
+          <button class="btn btn-primary" >Guardar</button>
       </form>
  </div>
-  
+

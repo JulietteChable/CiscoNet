@@ -1,0 +1,78 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Editar calificaciones</h4>
+    <a href="#" routerLink="/calificaciones/index" class="btn btn-success">Regresar</a>
+  </div>
+
+  <hr>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+<div class="form-group row">
+  <div class="col-md-6 ">
+    <label for="Nombre">Nombre:</label>
+    <input
+      formControlName="Nombre"
+      [(ngModel)]="calificacion.Nombre"
+      id="Nombre"
+      type="text"
+      class="form-control">
+    <div *ngIf="f.Nombre.touched && f.Nombre.invalid" class="alert alert-danger">
+        <div *ngIf="f.Nombre.errors.required">*Name is required.</div>
+        <div *ngIf="f.Nombre.errors.pattern">*The name must only contain letters.</div>
+    </div>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-6 ">
+    <label for="Matricula">Modulo 1:</label>
+    <input
+      formControlName="Modulo1"
+      [(ngModel)]="calificacion.Modulo1"
+      id="Modulo1"
+      type="text"
+      class="form-control">
+    <div *ngIf="f.Modulo1.touched && f.Modulo1.invalid" class="alert alert-danger">
+        <div *ngIf="f.Modulo1.errors.required">*Atributo es requerido</div>
+        <div *ngIf="f.Modulo1.errors.pattern">*The phone must only contain numbers.</div>
+    </div>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-6 ">
+    <label for="Modulo2">Modulo 2:</label>
+    <input
+      formControlName="Modulo2"
+      [(ngModel)]="calificacion.Modulo2"
+      id="Modulo2"
+      type="text"
+      class="form-control">
+    <div *ngIf="f.Modulo2.touched && f.Modulo2.invalid" class="alert alert-danger">
+        <div *ngIf="f.Modulo2.errors.required">*Atributo es requerido</div>
+        <div *ngIf="f.Modulo2.errors.pattern">*The phone must only contain numbers.</div>
+    </div>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-6 ">
+    <label for="Final">Final:</label>
+    <input
+      formControlName="Final"
+      [(ngModel)]="calificacion.Final"
+      id="Final"
+      type="text"
+      class="form-control">
+    <div *ngIf="f.Final.touched && f.Final.invalid" class="alert alert-danger">
+        <div *ngIf="f.Final.errors.required">*Atributo es requerido.</div>
+        <div *ngIf="f.Final.errors.pattern">*The phone must only contain numbers.</div>
+    </div>
+  </div>
+</div>
+
+      <button class="btn btn-primary">Actualizar</button>
+  </form>
+</div>

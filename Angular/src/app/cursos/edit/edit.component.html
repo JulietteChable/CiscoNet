@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Editar curso</h4>
+    <a href="#" routerLink="/cursos/index" class="btn btn-success">Regresar</a>
+  </div>
+
+  <hr>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="Generacion">Curso:</label>
+        <input
+          formControlName="Curso"
+          [(ngModel)]="curso.Curso"
+          id="Curso"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.Curso.touched && f.Curso.invalid" class="alert alert-danger">
+            <div *ngIf="f.Curso.errors.required">*Name is required.</div>
+            <div *ngIf="f.Curso.errors.pattern">*The name must only contain letters.</div>
+        </div>
+      </div>
+  </div>
+
+
+      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Actualizar</button>
+  </form>
+</div>

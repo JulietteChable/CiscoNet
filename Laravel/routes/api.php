@@ -3,7 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AlumnoController;
-
+use App\Http\Controllers\API\GeneracionController;
+use App\Http\Controllers\API\CursoController;
+use App\Http\Controllers\API\CalificacionController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Rutas para la tabla alumnos
 Route::prefix('alumno')->group(function () {
     Route::get('/',[ AlumnoController::class, 'getAll']);
     Route::post('/',[ AlumnoController::class, 'create']);
@@ -26,3 +29,31 @@ Route::prefix('alumno')->group(function () {
     Route::get('/{id}',[ AlumnoController::class, 'get']);
     Route::put('/{id}',[ AlumnoController::class, 'update']);
 });
+
+// Rutas para la tabla Generaciones
+Route::prefix('generacion')->group(function () {
+    Route::get('/',[ GeneracionController::class, 'getAll']);
+    Route::post('/',[ GeneracionController::class, 'create']);
+    Route::delete('/{id}',[ GeneracionController::class, 'delete']);
+    Route::get('/{id}',[ GeneracionController::class, 'get']);
+    Route::put('/{id}',[ GeneracionController::class, 'update']);
+});
+
+// Rutas para la tabla Cursos
+Route::prefix('curso')->group(function () {
+    Route::get('/',[ CursoController::class, 'getAll']);
+    Route::post('/',[ CursoController::class, 'create']);
+    Route::delete('/{id}',[ CursoController::class, 'delete']);
+    Route::get('/{id}',[ CursoController::class, 'get']);
+    Route::put('/{id}',[ CursoController::class, 'update']);
+});
+
+// Rutas para la tabla Calificaciones
+Route::prefix('calificacion')->group(function () {
+    Route::get('/',[ CalificacionController::class, 'getAll']);
+    Route::post('/',[ CalificacionController::class, 'create']);
+    Route::delete('/{id}',[ CalificacionController::class, 'delete']);
+    Route::get('/{id}',[ CalificacionController::class, 'get']);
+    Route::put('/{id}',[ CalificacionController::class, 'update']);
+});
+

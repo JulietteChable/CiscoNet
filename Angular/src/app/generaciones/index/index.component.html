@@ -1,0 +1,27 @@
+<section class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Lista de Generaciones</h4>
+    <a routerLink="/generaciones/create" class="btn btn-success">Agregar nueva generacion</a>
+  </div>
+
+  <br>
+
+  <table class="table ">
+    <tr>
+      <th>ID</th>
+      <th>GENERACION</th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let generacion of generacions">
+      <td>{{ generacion.id }}</td>
+      <td>{{ generacion.Generacion }}</td>
+
+      <td>
+        <a href="#" [routerLink]="['/generaciones/', 'edit', generacion.id  ]" class="btn btn-primary">Editar</a>
+        <button type="button" (click)="deleteGeneracion(generacion.id)" class="btn btn-danger">Borrar</button>
+      </td>
+    </tr>
+  </table>
+</section>
+
