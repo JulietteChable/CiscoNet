@@ -6,6 +6,7 @@ use App\Http\Controllers\API\AlumnoController;
 use App\Http\Controllers\API\GeneracionController;
 use App\Http\Controllers\API\CursoController;
 use App\Http\Controllers\API\CalificacionController;
+use App\Http\Controllers\API\CertificadoController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -55,5 +56,14 @@ Route::prefix('calificacion')->group(function () {
     Route::delete('/{id}',[ CalificacionController::class, 'delete']);
     Route::get('/{id}',[ CalificacionController::class, 'get']);
     Route::put('/{id}',[ CalificacionController::class, 'update']);
+});
+
+// Rutas para la tabla Certificado
+Route::prefix('certificado')->group(function () {
+    Route::get('/',[ CertificadoController::class, 'getAll']);
+    Route::post('/',[ CertificadoController::class, 'create']);
+    Route::delete('/{id}',[ CertificadoController::class, 'delete']);
+    Route::get('/{id}',[ CertificadoController::class, 'get']);
+    Route::put('/{id}',[ CertificadoController::class, 'update']);
 });
 
