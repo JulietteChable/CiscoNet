@@ -1,0 +1,37 @@
+<section class="container">
+
+    <div class="d-flex justify-content-between">
+      <h4>Lista de Certificados</h4>
+      <a routerLink="/certificado/create" class="btn btn-success">Agregar certificados</a>
+    </div>
+  
+    <br>
+    
+  
+    <table class="table ">
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>ESTUDIANTE</th>
+        <th>ESCUELA</th>
+        <th>UBICACION</th>
+        <th>FECHA</th>
+        <th>INSTRUCTOR</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let certificado of certificados">
+        <td>{{ certificado.id }}</td>
+        <td>{{ certificado.nombre }}</td>
+        <td>{{ certificado.estudiante }}</td>
+        <td>{{ certificado.escuela }}</td>
+        <td>{{ certificado.ubicacion }}</td>
+        <td>{{ certificado.fecha }}</td>
+        <td>{{ certificado.instructor }}</td>
+
+        <td>
+            <a href="#" [routerLink]="['/certificado/', 'edit', certificado.id  ]" class="btn btn-primary">Editar</a>
+            <button type="button" (click)="deleteCertificado(certificado.id)" class="btn btn-danger">Borrar</button>
+          </td>
+        </tr>
+      </table>
+    </section>

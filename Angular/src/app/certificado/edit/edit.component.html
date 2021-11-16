@@ -1,0 +1,114 @@
+<div class="container">
+
+    <div class="d-flex justify-content-between">
+      <h4>Editar certificados</h4>
+      <a href="#" routerLink="/certificado/index" class="btn btn-success">Regresar</a>
+    </div>
+  
+    <hr>
+  
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="nombre">Nombre:</label>
+      <input
+        formControlName="nombre"
+        [(ngModel)]="certificado.nombre"
+        id="nombre"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.nombre.touched && f.nombre.invalid" class="alert alert-danger">
+          <div *ngIf="f.nombre.errors.required">*Name is required.</div>
+          <div *ngIf="f.nombre.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="estudiante">Estudiante:</label>
+      <input
+        formControlName="estudiante"
+        [(ngModel)]="certificado.estudiante"
+        id="estudiante"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.estudiante.touched && f.estudiante.invalid" class="alert alert-danger">
+          <div *ngIf="f.estudiante.errors.required">*Estudiante is required.</div>
+          <div *ngIf="f.estudiante.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="escuela">Escuela:</label>
+      <input
+        formControlName="escuela"
+        [(ngModel)]="certificado.escuela"
+        id="escuela"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.escuela.touched && f.escuela.invalid" class="alert alert-danger">
+          <div *ngIf="f.escuela.errors.required">*Name is required.</div>
+          <div *ngIf="f.escuela.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="ubicacion">Ubicacion:</label>
+      <input
+        formControlName="ubicacion"
+        [(ngModel)]="certificado.ubicacion"
+        id="ubicacion"
+        type="ubicacion"
+        class="form-control">
+      <div *ngIf="f.ubicacion.touched && f.ubicacion.invalid" class="alert alert-danger">
+          <div *ngIf="f.ubicacion.errors.required">*Name is required.</div>
+          <div *ngIf="f.ubicacion.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="fecha">Fecha:</label>
+      <input
+        formControlName="fecha"
+        [(ngModel)]="certificado.fecha"
+        id="fecha"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.fecha.touched && f.fecha.invalid" class="alert alert-danger">
+          <div *ngIf="f.fecha.errors.required">*Name is required.</div>
+          <div *ngIf="f.fecha.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="instructor">Instructor:</label>
+      <input
+        formControlName="instructor"
+        [(ngModel)]="certificado.instructor"
+        id="instructor"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.instructor.touched && f.instructor.invalid" class="alert alert-danger">
+          <div *ngIf="f.instructor.errors.required">*Name is required.</div>
+          <div *ngIf="f.instructor.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+  
+  
+        <button class="btn btn-primary">Actualizar</button>
+    </form>
+  </div>
+  

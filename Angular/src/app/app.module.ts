@@ -7,6 +7,7 @@ import { ClienteModule } from './cliente/cliente.module';
 import { GeneracionesModule } from './generaciones/generaciones.module';
 import { CursosModule } from './cursos/cursos.module';
 import { CalificacionesModule } from './calificaciones/calificaciones.module';
+import { CertificadoModule } from './certificado/certificado.module';
 
 
 import { AppComponent } from './app.component';
@@ -24,7 +25,8 @@ import { AppComponent } from './app.component';
     ClienteModule,
     GeneracionesModule,
     CursosModule,
-    CalificacionesModule
+    CalificacionesModule,
+    CertificadoModule
 
 
   ],

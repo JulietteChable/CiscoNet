@@ -1,0 +1,111 @@
+<div class="container">
+
+    <div class="d-flex justify-content-between">
+      <h4>Generar certificados</h4>
+      <a href="#" routerLink="/certificado/index" class="btn btn-success">Regrear</a>
+    </div>
+  
+    <hr/>
+  
+      <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="Nombre">Nombre:</label>
+            <input
+              formControlName="Nombre"
+              id="Nombre"
+              type="text"
+              class="form-control">
+            <div *ngIf="f.Nombre.touched && f.Nombre.invalid" class="alert alert-danger">
+                <div *ngIf="f.Nombre.errors.required">*Atributo requerido.</div>
+                <div *ngIf="f.Nombre.errors.pattern">*The Atributo must only contain letters.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="estudiante">Estudiante:</label>
+              <input
+                formControlName="estudiante"
+                id="estudiante"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.estudiante.touched && f.estudiante.invalid" class="alert alert-danger">
+                  <div *ngIf="f.estudiante.errors.required">*Atributo requerido.</div>
+                  <div *ngIf="f.estudiante.errors.pattern">*The Atributo must only contain letters.</div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="escuela">Escuela:</label>
+              <input
+                formControlName="escuela"
+                id="escuela"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.escuela.touched && f.escuela.invalid" class="alert alert-danger">
+                  <div *ngIf="f.escuela.errors.required">*Atributo requerido.</div>
+                  <div *ngIf="f.escuela.errors.pattern">*The Atributo must only contain letters.</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="ubicacion">Ubicacion:</label>
+              <input
+                formControlName="ubicacion"
+                id="ubicacion"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.ubicacion.touched && f.ubicacion.invalid" class="alert alert-danger">
+                  <div *ngIf="f.ubicacion.errors.required">*Atributo requerido.</div>
+                  <div *ngIf="f.ubicacion.errors.pattern">*The Atributo must only contain letters.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="fecha">Fecha:</label>
+              <input
+                formControlName="fecha"
+                id="fecha"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.fecha.touched && f.fecha.invalid" class="alert alert-danger">
+                  <div *ngIf="f.fecha.errors.required">*Atributo requerido.</div>
+                  <div *ngIf="f.fecha.errors.pattern">*The Atributo must only contain letters.</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="instructor">Instructor:</label>
+              <input
+                formControlName="instructor"
+                id="instructor"
+                type="text"
+                class="form-control">
+              <div *ngIf="f.instructor.touched && f.instructor.invalid" class="alert alert-danger">
+                  <div *ngIf="f.instructor.errors.required">*Atributo requerido.</div>
+                  <div *ngIf="f.instructor.errors.pattern">*The Atributo must only contain letters.</div>
+              </div>
+            </div>
+          </div>
+
+         
+  
+      
+  
+          <button class="btn btn-primary">Guardar</button>
+      </form>
+  </div>
