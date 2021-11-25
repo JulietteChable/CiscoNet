@@ -8,9 +8,10 @@ import { GeneracionesModule } from './generaciones/generaciones.module';
 import { CursosModule } from './cursos/cursos.module';
 import { CalificacionesModule } from './calificaciones/calificaciones.module';
 import { CertificadoModule } from './certificado/certificado.module';
-
+import { NotasModule } from './notas/notas.module';
 
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { AppComponent } from './app.component';
     GeneracionesModule,
     CursosModule,
     CalificacionesModule,
-    CertificadoModule
+    NotasModule,
+    CertificadoModule,
+    NgbModule
 
 
   ],

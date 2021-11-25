@@ -1,0 +1,75 @@
+<div class="container">
+
+    <div class="d-flex justify-content-between">
+      <h4>Ingresar calificaciones</h4>
+      <a href="#" routerLink="/notas/index" class="btn btn-success">Regrear</a>
+    </div>
+  
+    <hr/>
+  
+      <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="Nombre">NOMBRE:</label>
+            <input
+              formControlName="Nombre"
+              id="Nombre"
+              type="text"
+              class="form-control">
+            <div *ngIf="f.Nombre.touched && f.Nombre.invalid" class="alert alert-danger">
+                <div *ngIf="f.Nombre.errors.required">*Atributo requerido.</div>
+                <div *ngIf="f.Nombre.errors.pattern">*The Atributo must only contain letters.</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="Curso1">CURSO 1:</label>
+            <input
+              formControlName="Curso1"
+              id="Curso1"
+              type="text"
+              class="form-control">
+            <div *ngIf="f.Curso1.touched && f.Curso1.invalid" class="alert alert-danger">
+                <div *ngIf="f.Curso1.errors.required">*Atributo requerido.</div>
+                <div *ngIf="f.Curso1.errors.pattern">*The Atributo must only contain numbers.</div>
+            </div>
+          </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-md-6 ">
+          <label for="Curso2">CURSO 2:</label>
+          <input
+            formControlName="Curso2"
+            id="Curso2"
+            type="text"
+            class="form-control">
+          <div *ngIf="f.Curso2.touched && f.Curso2.invalid" class="alert alert-danger">
+              <div *ngIf="f.Curso2.errors.required">*Atributo requerido.</div>
+              <div *ngIf="f.Curso2.errors.pattern">*The Atributo must only contain numbers.</div>
+          </div>
+        </div>
+    </div>
+  
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="Promedio">PROMEDIO:</label>
+        <input
+          formControlName="Promedio"
+          id="Promedio"
+          type="text"
+          class="form-control">
+        <div *ngIf="f.Promedio.touched && f.Promedio.invalid" class="alert alert-danger">
+            <div *ngIf="f.Promedio.errors.required">*Atributo requerido.</div>
+            <div *ngIf="f.Promedio.errors.pattern">*The Atributo must only contain numbers.</div>
+        </div>
+      </div>
+  </div>
+  
+          <button class="btn btn-primary">Guardar</button>
+      </form>
+  </div>
+  

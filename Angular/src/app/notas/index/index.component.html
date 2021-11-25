@@ -1,0 +1,32 @@
+<section class="container">
+
+    <div class="d-flex justify-content-between">
+      <h4>Lista de Calificaciones</h4>
+      <a routerLink="/notas/create" class="btn btn-success">Agregar calificaciones</a>
+    </div>
+  
+    <br>
+  
+    <table class="table ">
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>CURSO 1</th>
+        <th>CURSO 2</th>
+        <th>PROMEDIO</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let notas of notas">
+        <td>{{ notas.id }}</td>
+        <td>{{ notas.Nombre }}</td>
+        <td>{{ notas.Curso1 }}</td>
+        <td>{{ notas.Curso2 }}</td>
+        <td>{{ notas.Promedio }}</td>
+  
+        <td>
+          <a href="#" [routerLink]="['/notas/', 'edit', notas.id  ]" class="btn btn-primary">Editar</a>
+          <button type="button" (click)="deleteNotas(notas.id)" class="btn btn-danger">Borrar</button>
+        </td>
+      </tr>
+    </table>
+  </section>
