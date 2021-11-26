@@ -6,6 +6,7 @@ use App\Http\Controllers\API\AlumnoController;
 use App\Http\Controllers\API\GeneracionController;
 use App\Http\Controllers\API\CursoController;
 use App\Http\Controllers\API\CalificacionController;
+use App\Http\Controllers\API\NotasController;
 use App\Http\Controllers\API\CertificadoController;
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,15 @@ Route::prefix('calificacion')->group(function () {
     Route::delete('/{id}',[ CalificacionController::class, 'delete']);
     Route::get('/{id}',[ CalificacionController::class, 'get']);
     Route::put('/{id}',[ CalificacionController::class, 'update']);
+});
+
+//Tablas Calificaciones Ana
+Route::prefix('notas')->group(function () {
+    Route::get('/',[ NotasController::class, 'getAll']);
+    Route::post('/',[ NotasController::class, 'create']);
+    Route::delete('/{id}',[ NotasController::class, 'delete']);
+    Route::get('/{id}',[ NotasController::class, 'get']);
+    Route::put('/{id}',[ NotasController::class, 'update']);
 });
 
 // Rutas para la tabla Certificado
