@@ -37,7 +37,7 @@ export class CreateComponent implements OnInit {
   submit(){
     console.log(this.form.value);
     this.notasService.create(this.form.value).subscribe(res => {
-         console.log('Notas created successfully!');
+         console.log('notas created successfully!');
          this.router.navigateByUrl('notas/index');
     })
   }
