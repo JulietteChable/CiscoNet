@@ -13,9 +13,11 @@ import { NotasModule } from './notas/notas.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
 
   ],
   imports: [
