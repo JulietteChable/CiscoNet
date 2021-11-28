@@ -66,7 +66,7 @@
         id="Promedio"
         type="text"
         class="form-control">
-      <div *ngIf="f.Final.touched && f.Promedio.invalid" class="alert alert-danger">
+      <div *ngIf="f.Promedio.touched && f.Promedio.invalid" class="alert alert-danger">
           <div *ngIf="f.Promedio.errors.required">*Atributo es requerido.</div>
           <div *ngIf="f.Promedio.errors.pattern">*The phone must only contain numbers.</div>
       </div>
