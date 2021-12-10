@@ -20,7 +20,7 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
 
     this.form = new FormGroup({
-      Generacion:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ1234567890-_ \-\']+') ])
+      Generacion:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ1234567890-_ - \-\']+') ])
     });
 
   }

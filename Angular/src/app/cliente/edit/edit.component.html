@@ -1,5 +1,5 @@
 <div class="container">
-  
+
     <div class="d-flex justify-content-between">
       <h4>Editar alumno</h4>
       <a href="#" routerLink="/cliente/index" class="btn btn-success">Regresar</a>
@@ -13,16 +13,16 @@
       <div class="form-group row">
         <div class="col-md-6 ">
           <label for="Generacion">Generacion:</label>
-          <input
-            formControlName="Generacion"
-            [(ngModel)]="alumno.Generacion"
-            id="Generacion"
-            type="text"
-            class="form-control">
-          <div *ngIf="f.Generacion.touched && f.Generacion.invalid" class="alert alert-danger">
-              <div *ngIf="f.Generacion.errors.required">*Name is required.</div>
-              <div *ngIf="f.Generacion.errors.pattern">*The name must only contain letters.</div>
-          </div>
+            <br>
+                <select formControlName="Generacion"
+                [(ngModel)]="alumno.Generacion"
+                id="Generacion"
+                class="form-control form-control-alternative"
+                aria-describedby="GeneracionFeedback" required>
+             <!-- <option selected disabled value="">Generaciones</option> -->
+                  <option>2020-2021N</option>
+                  <option>2022-2022P</option>
+               </select>
         </div>
     </div>
 
@@ -77,32 +77,39 @@
     <div class="form-group row">
       <div class="col-md-6 ">
         <label for="Status">Status:</label>
-        <input
-          formControlName="Status"
-          [(ngModel)]="alumno.Status"
-          id="Status"
-          type="text"
-          class="form-control">
-        <div *ngIf="f.Status.touched && f.Status.invalid" class="alert alert-danger">
-            <div *ngIf="f.Status.errors.required">*Name is required.</div>
-            <div *ngIf="f.Status.errors.pattern">*The name must only contain letters.</div>
-        </div>
+          <br>
+          <select formControlName="Status"
+            [(ngModel)]="alumno.Status"
+              id="Status"
+              class="form-control form-control-alternative"
+              aria-describedby="StatusFeedback" required>
+          <!--<option selected disabled value="">Status</option> -->
+              <option>Activo</option>
+              <option>Baja</option>
+              <option>Baja Temporal</option>
+              <option>Baja Definitiva</option>
+
+              </select>
       </div>
     </div>
 
     <div class="form-group row">
       <div class="col-md-6 ">
         <label for="Curso">Curso:</label>
-        <input
-          formControlName="Curso"
+          <br>
+          <select formControlName="Curso"
           [(ngModel)]="alumno.Curso"
           id="Curso"
-          type="text"
-          class="form-control">
-        <div *ngIf="f.Curso.touched && f.Curso.invalid" class="alert alert-danger">
-            <div *ngIf="f.Curso.errors.required">*Name is required.</div>
-            <div *ngIf="f.Curso.errors.pattern">*The name must only contain letters.</div>
-        </div>
+          class="form-control form-control-alternative"
+          aria-describedby="CursoFeedback" required>
+      <!-- <option selected disabled value="">Cursos</option> -->
+            <option>CCNA_1</option>
+            <option>CCNA_2</option>
+            <option>CCNA_3</option>
+            <option>CCNA_4</option>
+
+         </select>
+
       </div>
     </div>
 
