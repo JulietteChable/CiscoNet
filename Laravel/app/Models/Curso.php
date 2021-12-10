@@ -16,4 +16,9 @@ class Curso extends Model
       'Curso'
 
     ];
+
+    public function cursos()
+    {
+      return $this->hasMany(Curso::class, 'id');
+    }
 }

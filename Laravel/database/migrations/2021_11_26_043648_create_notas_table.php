@@ -15,11 +15,26 @@ class CreateNotasTable extends Migration
     {
         Schema::create('notas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_alumno')
+            ->nullable()
+            ->constrained('alumno')
+            ->cascadeOnUpdate()
+            ->nullOnDelete();
+
+
             $table->string('Nombre')->nullable();
             $table->string('Curso1')->nullable();
             $table->string('Curso2')->nullable();
             $table->string('Promedio')->nullable();
             $table->timestamps();
+
+            $table->foreignId('id_curso')
+            ->nullable()
+            ->constrained('curso')
+            ->cascadeOnUpdate()
+            ->nullOnDelete();
+
+
         });
     }
 

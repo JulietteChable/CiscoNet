@@ -18,5 +18,16 @@ class Notas extends Model
         'Promedio'
   
       ];
-  
+
+    public function alumnos()
+    {
+      return $this->belongsTo(Alumno::class, 'id_alumno');
+    }
+
+    public function cursos()
+    {
+      return $this->belongsTo(Curso::class, 'id_curso');
+    }
 }
+  
+
