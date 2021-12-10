@@ -26,7 +26,7 @@ export class CreateComponent implements OnInit {
       Apellido:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ \-\']+') ]),
       Status:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ1234567890 \-\']+') ]),
       Curso:  new FormControl('', [ Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ1234567890-_ \-\']+') ])
-      
+
     });
 
   }
@@ -36,6 +36,7 @@ export class CreateComponent implements OnInit {
   }
 
   submit(){
+    console.log(this.form);
     console.log(this.form.value);
     this.alumnoService.create(this.form.value).subscribe(res => {
          console.log('cliente created successfully!');

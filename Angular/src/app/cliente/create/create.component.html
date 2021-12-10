@@ -13,12 +13,14 @@
               <div class="col-md-6 ">
                 <label for="Generacion">Generacion:</label>
                 <br>
-                <select name="OS">
-                  <option value="1">20202021N</option>
-
+                <select formControlName="Generacion"
+                id="Generacion"
+                class="form-control form-control-alternative"
+                aria-describedby="GeneracionFeedback" required>
+             <!-- <option selected disabled value="">Generaciones</option> -->
+                  <option>2020-2021N</option>
+                  <option>2022-2022P</option>
                </select>
-
-
 
               </div>
           </div>
@@ -72,11 +74,15 @@
             <div class="col-md-6 ">
               <label for="Status">Status:</label>
               <br>
-                <select name="OS">
-                  <option value="1">Activo</option>
-                  <option value="2">Activa</option>
-                  <option value="3">Baja Temporal</option>
-                  <option value="4">Baja Definitiva</option>
+                <select formControlName="Status"
+                id="Status"
+                class="form-control form-control-alternative"
+                aria-describedby="StatusFeedback" required>
+              <!--<option selected disabled value="">Status</option> -->
+                  <option>Activo</option>
+                  <option>Baja</option>
+                  <option>Baja Temporal</option>
+                  <option>Baja Definitiva</option>
 
                </select>
             </div>
@@ -86,9 +92,15 @@
             <div class="col-md-6 ">
               <label for="Curso">Curso:</label>
               <br>
-                <select name="OS">
-                  <option value="1">CCNA_1_20202021N</option>
-                  <option value="2">CCNA_2_20202021N</option>
+                <select formControlName="Curso"
+                id="Curso"
+                class="form-control form-control-alternative"
+                aria-describedby="CursoFeedback" required>
+            <!-- <option selected disabled value="">Cursos</option> -->
+                  <option>CCNA_1</option>
+                  <option>CCNA_2</option>
+                  <option>CCNA_3</option>
+                  <option>CCNA_4</option>
 
                </select>
             </div>
@@ -97,4 +109,6 @@
           <button class="btn btn-primary" >Guardar</button>
       </form>
  </div>
+
+
 
