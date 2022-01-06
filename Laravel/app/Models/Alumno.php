@@ -24,4 +24,9 @@ class Alumno extends Model
       'Ccna2',
       'Final'
     ];
+
+    public function notas()
+    {
+      return $this->hasMany(Nota::class, 'id');
+    }
 }
