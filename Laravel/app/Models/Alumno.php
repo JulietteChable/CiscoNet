@@ -19,6 +19,9 @@ class Alumno extends Model
       'Apellido',
       'Email',
       'Status',
-      'Curso'
+      'Curso',
+      'Ccna1',
+      'Ccna2',
+      'Final'
     ];
 }

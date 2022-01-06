@@ -7,5 +7,8 @@ export interface Alumno {
     Apellido: string;
     Status: string;
     Curso: string;
-    
+    Ccna1: string;
+    Ccna2: string;
+    Final: string;
+
 }

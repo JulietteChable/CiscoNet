@@ -1,0 +1,42 @@
+<section class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Lista de Calificaciones</h4>
+    <a routerLink="/cliente/index" class="btn btn-success">Regrear</a>
+  </div>
+
+  <br>
+
+  <table class="table ">
+  <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>GENERACION</th>
+      <th>MATRICULA</th>
+      <th>NOMBRE</th>
+      <th>CCNA1</th>
+      <th>CCNA2</th>
+      <th>FINAL</th>
+      <th width="220px">MODIFICAR</th>
+
+    </tr>
+  </thead>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{ alumno.id }}</td>
+      <td>{{ alumno.Generacion }}</td>
+      <td>{{ alumno.Matricula }}</td>
+      <td>{{ alumno.Nombre }}</td>
+      <td>{{ alumno.Ccna1 }}</td>
+      <td>{{ alumno.Ccna2 }}</td>
+      <td>{{ alumno.Final }}</td>
+      <td>
+        <!-- Codigo de los botones Editar y borrar -->
+        <a href="#" [routerLink]="['/cliente/', 'califi', alumno.id  ]" class="btn btn-primary">Editar</a>
+        <button type="button" (click)="deleteAlumno(alumno.id)" class="btn btn-danger">Borrar</button>
+
+
+      </td>
+    </tr>
+  </table>
+</section>
+

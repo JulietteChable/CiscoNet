@@ -22,6 +22,9 @@ class CreateAlumnoTable extends Migration
             $table->string('Apellido')->nullable();
             $table->string('Status')->nullable();
             $table->string('Curso')->nullable();
+            $table->string('Ccna1')->nullable();
+            $table->string('Ccna2')->nullable();
+            $table->string('Final')->nullable();
             $table->timestamps();
         });
     }

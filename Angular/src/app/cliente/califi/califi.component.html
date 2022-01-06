@@ -1,8 +1,8 @@
 <div class="container">
 
     <div class="d-flex justify-content-between">
-      <h4>Editar Alumno </h4>
-      <a href="#" routerLink="/cliente/index" class="btn btn-success">Regresar</a>
+      <h4>Ingresar Calificaciones</h4>
+      <a href="#" routerLink="/cliente/liscalifi" class="btn btn-success">Regresar</a>
     </div>
 
     <hr>
@@ -113,6 +113,55 @@
       </div>
     </div>
 
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="Ccna1">Calificacion CCNA1:</label>
+      <input
+        formControlName="Ccna1"
+        [(ngModel)]="alumno.Ccna1"
+        id="Ccna1"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.Ccna1.touched && f.Ccna1.invalid" class="alert alert-danger">
+          <div *ngIf="f.Ccna1.errors.required">*Name is required.</div>
+          <div *ngIf="f.Ccna1.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="Ccna2">Calificacion CCNA2:</label>
+      <input
+        formControlName="Ccna2"
+        [(ngModel)]="alumno.Ccna2"
+        id="Ccna2"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.Ccna2.touched && f.Ccna2.invalid" class="alert alert-danger">
+          <div *ngIf="f.Ccna2.errors.required">*Name is required.</div>
+          <div *ngIf="f.Ccna2.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6 ">
+      <label for="Final">Calificacion Final:</label>
+      <input
+        formControlName="Final"
+        [(ngModel)]="alumno.Final"
+        id="Final"
+        type="text"
+        class="form-control">
+      <div *ngIf="f.Final.touched && f.Final.invalid" class="alert alert-danger">
+          <div *ngIf="f.Final.errors.required">*Name is required.</div>
+          <div *ngIf="f.Final.errors.pattern">*The name must only contain letters.</div>
+      </div>
+    </div>
+  </div>
+
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Actualizar</button>
     </form>
 </div>
+

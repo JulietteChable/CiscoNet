@@ -31,8 +31,10 @@
         <td>{{ alumno.Curso }}</td>
         <td>
           <!-- Codigo de los botones Editar y borrar -->
-          <a href="#" [routerLink]="['/cliente/', 'edit', alumno.id  ]" class="btn btn-primary">Editar</a>
+         <!-- <a href="#" [routerLink]="['/cliente/', 'edit', alumno.id  ]" class="btn btn-primary">Editar</a>-->
+          <a href="#" routerLink="/cliente/liscalifi" class="btn btn-success">Calificaciones</a>
           <button type="button" (click)="deleteAlumno(alumno.id)" class="btn btn-danger">Borrar</button>
+           <!-- <a href="#" [routerLink]="['/cliente/', 'califi', alumno.id  ]" class="btn btn-primary">Calif</a> -->
 
         </td>
       </tr>

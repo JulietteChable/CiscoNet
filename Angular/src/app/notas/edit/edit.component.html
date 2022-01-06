@@ -66,14 +66,14 @@
         id="Promedio"
         type="text"
         class="form-control">
-      <div *ngIf="f.Promedio.touched && f.Promedio.invalid" class="alert alert-danger">
+      <div *ngIf="f.Final.touched && f.Promedio.invalid" class="alert alert-danger">
           <div *ngIf="f.Promedio.errors.required">*Atributo es requerido.</div>
           <div *ngIf="f.Promedio.errors.pattern">*The phone must only contain numbers.</div>
       </div>
     </div>
   </div>
   
-  <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Actualizar</button>
+        <button class="btn btn-primary">Actualizar</button>
     </form>
   </div>
   
